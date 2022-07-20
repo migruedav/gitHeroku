@@ -4,9 +4,22 @@ from binance.client import Client
 #FastAPI
 from fastapi import FastAPI
 from fastapi import Query
+import fastapi.middleware.cors as _cors
 
 app = FastAPI()
 
+origins = [
+    'http://127.0.0.1:8000',
+    'https://56d.835.myftpupload.com/'
+]
+
+app.add_middleware(
+    _cors.CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=["*"]
+)
 
 @app.get("/")
 def crypto():
