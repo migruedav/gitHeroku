@@ -13,7 +13,8 @@ origins = [
     "http://localhost",
     "http://localhost:8080",
     "https://56d.835.myftpupload.com",
-    "https://56d.835.myftpupload.com/:271"
+    "https://56d.835.myftpupload.com/:271",
+    "'https://cdpn.io'"
 ]
 
 app.add_middleware(
