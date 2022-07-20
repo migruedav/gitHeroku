@@ -7,7 +7,12 @@ from fastapi import Query
 
 app = FastAPI()
 
+
 @app.get("/")
+def crypto():
+    return {"Connection":"Success"}
+    
+@app.get("/coins")
 def power(coin:str = Query(...)):
     
     api_key    = 'glrxacPAoL82BwKAfWvsqEYmM4pWys6wXfBZOwWYXGKAnCW4nplV62SUDLqsC1b2'
