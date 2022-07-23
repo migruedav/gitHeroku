@@ -24,6 +24,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def home():
+    return {"conecction":"Success"}
 
 @app.get("/coin/{coin}")
 def crypto(
@@ -40,7 +43,6 @@ def crypto(
         d = 19-((18/456)*i)
         days_fact.append(d)
 
-    coin="EOS"
 
     klines = client.get_historical_klines(coin+"USDT", Client.KLINE_INTERVAL_1HOUR, "19 day ago UTC")
     close = []
