@@ -42,6 +42,8 @@ def crypto(
     for i in range(1,457):
         d = 19-((18/456)*i)
         days_fact.append(d)
+    
+    coin=coin.upper()
 
 
     klines = client.get_historical_klines(coin+"USDT", Client.KLINE_INTERVAL_1HOUR, "19 day ago UTC")
