@@ -31,14 +31,16 @@ def home():
 
 @app.get("/html/", response_class=HTMLResponse)
 async def html():
-    return """
+    coin = "BTC"
+    return f"""
     <html>
         <head>
             <title>Some HTML in here</title>
         </head>
         <body>
             <h1>Look ma! HTML!</h1>
-            <p>Momo TVAPE</p>
+            <p>Momo TVAPEC</p>
+            <p>{coin}</p>
         </body>
     </html>
 """
