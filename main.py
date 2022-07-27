@@ -50,6 +50,7 @@ async def crypto(
         title="Coin",
         description="The Coin to get the power, Its Required")
     ):
+
     api_key    = 'glrxacPAoL82BwKAfWvsqEYmM4pWys6wXfBZOwWYXGKAnCW4nplV62SUDLqsC1b2'
     api_secret = '8bllLJnlvLogsbOAflT8N32oSuKrV6aDM8efdze7XdEgW5oYio6cyKOejH4SpPoT'
     client = Client(api_key, api_secret)
@@ -96,13 +97,13 @@ async def crypto(
         direction = "bearish"
     data = {"coin":coin, "power":power, "direction":direction}
 
-        return """
-    <html>
-        <head>
-            <title>Some HTML in here</title>
-        </head>
-        <body>
-            <h1>Look ma! HTML!</h1>
-            <p>fadf</p>
-        </body>
-    </html>
+        return f"""
+        <html>
+            <head>
+                <title>Some HTML in here</title>
+            </head>
+            <body>
+                <h1>Look ma! HTML!</h1>
+                <p>{coin}</p>
+            </body>
+        </html>"""
