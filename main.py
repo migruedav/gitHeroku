@@ -44,7 +44,7 @@ async def html():
 """
 
 @app.get("/coin/{coin}")
-def crypto(
+async def crypto(
     coin:str = Path(
         ...,
         title="Coin",
@@ -96,4 +96,13 @@ def crypto(
         direction = "bearish"
     data = {"coin":coin, "power":power, "direction":direction}
 
-    return data
+        return f"""
+    <html>
+        <head>
+            <title>Some HTML in here</title>
+        </head>
+        <body>
+            <h1>Look ma! HTML!</h1>
+            <p>{data[coin]}</p>
+        </body>
+    </html>
