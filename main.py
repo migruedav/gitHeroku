@@ -97,13 +97,14 @@ async def crypto(
         direction = "bearish"
     data = {"coin":coin, "power":power, "direction":direction}
 
-        return f"""
+    return """
         <html>
             <head>
                 <title>Some HTML in here</title>
             </head>
             <body>
                 <h1>Look ma! HTML!</h1>
-                <p>{coin}</p>
+                <p>Momo TVAPEC</p>
             </body>
-        </html>"""
+        </html>
+    """
